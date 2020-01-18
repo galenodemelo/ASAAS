@@ -1,0 +1,127 @@
+/*
+Font loading
+*/
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,800,800i&display=swap");
+
+/* 
+Universal vars and classes
+*/
+:root {
+  --blue-color: #396afc;
+  --blue-gradient: linear-gradient(to right, #2948ff, #396afc);
+}
+
+.shadowed {
+  -webkit-box-shadow: 5px 5px 18px -1px rgba(0, 0, 0, 0.25);
+  box-shadow: 5px 5px 18px -1px rgba(0, 0, 0, 0.25);
+}
+
+/* 
+Headings
+*/
+h1,
+.h1-like {
+  margin-bottom: 32px;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+/* 
+Body style
+*/
+body {
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  background-color: #efefef;
+  color: #363636;
+
+  /* Universal font */
+  font-family: "Open Sans", sans-serif;
+
+  /* Creates grid to make the sidebar and the main content fluid */
+  display: grid;
+  grid-template-columns: 20% 80%;
+}
+
+/*
+Sidebar navigation
+*/
+.nav {
+  padding: 35px 50px;
+  background: var(--blue-gradient);
+  box-sizing: border-box;
+}
+
+.nav__logo {
+  width: 100%;
+}
+
+/* Menu */
+.nav__menu-wrapper {
+  margin-top: 125px;
+}
+
+.nav__menu__item {
+  display: block;
+  margin-bottom: 25px;
+  padding: 10px;
+  width: 100%;
+  text-align: center;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 1.4rem;
+  box-sizing: border-box;
+}
+
+.nav__menu__item:hover,
+.nav__menu__item--active {
+  margin-top: -1px;
+  border: #ffffff solid 1px;
+  border-radius: 5px;
+}
+
+.nav__menu__item--active {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/*
+Main content
+*/
+.app {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  overflow: auto;
+}
+
+.app__box {
+  max-width: 90%;
+  padding: 42px;
+  margin-top: 42px;
+  background-color: #ffffff;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+/* Filters bar */
+.app__controls {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.app__controls__action {
+  margin-right: 75px;
+}
+
+/* Records list */
+.app__table {
+  margin: 0 auto;
+  width: 100%;
+}

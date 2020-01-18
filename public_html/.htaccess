@@ -1,0 +1,11 @@
+RewriteEngine On
+RewriteBase /testes/asaas/public_html/
+
+## CREATE RULES FOR MVC ARCHITETURE ##
+RewriteRule ^([a-z,-]+)\/?$                             index.php?module=$1                         [QSA,L,NC]
+RewriteRule ^([a-z,-]+)\/([a-z,-]+)\/?$                 index.php?module=$1&action=$2               [QSA,L,NC]
+RewriteRule ^([a-z,-]+)\/([a-z,-]+)\/([a-z,0-9,-]+)\/?$ index.php?module=$1&action=$2&identifier=$3 [QSA,L,NC]
+
+## ERROR HANDLING ##
+ErrorDocument 404 404.php
+ErrorDocument 500 500.php
