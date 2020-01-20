@@ -1,6 +1,9 @@
 <?php
 
 // Set the header charset
+
+use Classes\DBConnect;
+
 header('Content-Type: text/html; charset=utf-8');
 
 // Loads constants, configs and classes
@@ -38,5 +41,7 @@ try {
 	}
 } catch (Exception $e) {
 	error_log($e->getMessage(), 0);
-	die($e->getMessage());
+	echo $e->getMessage();
 }
+
+DBConnect::disconnect();

@@ -1,9 +1,6 @@
 <?php
 
-// Loads all the constants
-require __DIR__ . '/settings/Constants.php';
-
-// Loads the configs
+// Loads the configs and constants
 require __DIR__ . '/settings/Configs.php';
 
 /**

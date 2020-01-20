@@ -16,30 +16,20 @@
 	<!-- CSS sheets -->
 	<link rel="stylesheet" href="<?= PATH_ASSETS_CSS . 'reset.css' ?>">
 	<link rel="stylesheet" href="<?= PATH_ASSETS_CSS . 'style.css?' . rand() ?>">
-
 </head>
 
 <body>
 	<!-- 
 		Sidebar
 	 -->
-	<aside class="nav shadowed">
+	<nav class="nav shadowed">
 
 		<!-- Logo -->
 		<a href="<?= BASE_PATH ?>">
 			<img src="<?= PATH_ASSETS_IMG . 'asaas-logo.svg' ?>" alt="Logotipo ASAAS" class="nav__logo">
 		</a>
 
-		<!-- Menu links -->
-		<nav class="nav__menu-wrapper">
-			<a href="#" class="nav__menu__item nav__menu__item--active shadowed">
-				Cobranças
-			</a>
-			<a href="#" class="nav__menu__item">
-				Clientes
-			</a>
-		</nav>
-	</aside>
+	</nav>
 
 	<!-- 
 		Main content

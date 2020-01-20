@@ -48,4 +48,21 @@ class DBConnect
 
 		return self::$instance;
 	}
+
+	/**
+	 * Disconnects from database
+	 */
+	public static function disconnect()
+	{
+		self::$instance = null;
+	}
+
+	/**
+	 * Gets last ID of insert
+	 * @return Int last id
+	 */
+	public static function getLastId(): int
+	{
+		return self::$instance->lastInsertId();
+	}
 }

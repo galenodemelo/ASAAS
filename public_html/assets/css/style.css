@@ -29,6 +29,14 @@ h1,
 }
 
 /* 
+Text style
+*/
+b,
+strong {
+  font-weight: 800;
+}
+
+/* 
 Body style
 */
 body {
@@ -40,58 +48,35 @@ body {
 
   /* Universal font */
   font-family: "Open Sans", sans-serif;
-
-  /* Creates grid to make the sidebar and the main content fluid */
-  display: grid;
-  grid-template-columns: 20% 80%;
 }
 
 /*
 Sidebar navigation
 */
 .nav {
-  padding: 35px 50px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
   background: var(--blue-gradient);
   box-sizing: border-box;
+  z-index: 10;
 }
 
 .nav__logo {
-  width: 100%;
-}
-
-/* Menu */
-.nav__menu-wrapper {
-  margin-top: 125px;
-}
-
-.nav__menu__item {
-  display: block;
-  margin-bottom: 25px;
-  padding: 10px;
-  width: 100%;
-  text-align: center;
-  color: #ffffff;
-  text-transform: uppercase;
-  font-weight: 800;
-  font-size: 1.4rem;
-  box-sizing: border-box;
-}
-
-.nav__menu__item:hover,
-.nav__menu__item--active {
-  margin-top: -1px;
-  border: #ffffff solid 1px;
-  border-radius: 5px;
-}
-
-.nav__menu__item--active {
-  background-color: rgba(255, 255, 255, 0.1);
+  display: inline-block;
+  height: 90%;
 }
 
 /*
 Main content
 */
 .app {
+  padding-top: 80px;
   display: flex;
   align-items: flex-start;
   justify-content: center;
@@ -102,6 +87,7 @@ Main content
   max-width: 90%;
   padding: 42px;
   margin-top: 42px;
+  margin-bottom: 72px;
   background-color: #ffffff;
   border-radius: 6px;
   box-sizing: border-box;
@@ -110,18 +96,81 @@ Main content
 /* Filters bar */
 .app__controls {
   margin-bottom: 15px;
-  display: flex;
+  display: grid;
+  grid-template-columns: 150px auto;
+  column-gap: 35px;
   align-items: center;
   justify-content: space-between;
   width: 100%;
 }
 
-.app__controls__action {
-  margin-right: 75px;
+.app__controls__filters {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 225px 125px 125px 185px 100px 32px;
+  gap: 25px;
 }
 
 /* Records list */
 .app__table {
   margin: 0 auto;
   width: 100%;
+  box-sizing: border-box;
+  white-space: normal;
+}
+
+/* Make the actions buttons width fixed */
+.app__table th:last-child {
+	width: 150px;
+}
+
+/* Form */
+.app__box__form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: auto;
+  column-gap: 50px;
+  row-gap: 35px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.mdl-radio {
+  margin-right: 25px;
+}
+
+.app__box__form__full-width {
+  grid-column: span 2;
+  width: auto;
+  text-align: center;
+}
+
+/* 
+Pagination
+*/
+.app__pagination {
+	text-align: center;
+	width: 100%;
+	margin-top: 50px;
+	vertical-align: middle;
+}
+
+.app__pagination__item,
+.app__pagination__item--active {
+	display: inline-block;
+	margin: 0 5px;
+	width: 32px;
+	height: 32px;
+	line-height: 32px;
+	border-radius: 100%;
+}
+
+.app__pagination__item {
+	background-color: #eaeaea;
+}
+
+.app__pagination__item--active {
+	background-color: #3f51b5;
+	color: #ffffff;
+	font-weight: 800;
 }
